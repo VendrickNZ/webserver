@@ -11,12 +11,12 @@ int main() {
 
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
-    address.sin_port = htons(8080);
+    address.sin_port = htons(3000);
 
     bind(server_fd, (sockaddr*)&address, sizeof(address));
     listen(server_fd, 3);
 
-    std::cout << "Server listening on port 8080\n";
+    std::cout << "Server listening on port 3000\n";
 
     while (true) {
         int new_socket = accept(server_fd, (sockaddr*)&address, (socklen_t*)&addrlen);
