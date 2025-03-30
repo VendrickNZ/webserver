@@ -1,1 +1,21 @@
+# Build directory
 build/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Compiled object files and binaries
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.exe
+a.out
+
+# Miscellaneous
+todo.md
+webserver
