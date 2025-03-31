@@ -11,6 +11,7 @@
  */
 
 HttpRequest::HttpRequest()
+    : method(), target(), httpVersion(), headers()
 {
 
 }
@@ -22,6 +23,11 @@ HttpRequest::~HttpRequest()
 
 std::string ParseData(std::string &buffer)
 {
+    ParseHeader(buffer);
+}
+
+std::string ParseHeader(std::string &buffer)
+{
     std::string header = "";
     std::string header_terminator = "\r\n\r\n";
     size_t i = 0;
@@ -30,4 +36,10 @@ std::string ParseData(std::string &buffer)
             i < buffer.size()) {
         header.push_back(buffer[i]);
     }
+    return header;
+}
+
+std::string ParseBody()
+{
+
 }
