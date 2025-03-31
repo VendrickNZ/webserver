@@ -22,5 +22,12 @@ HttpRequest::~HttpRequest()
 
 std::string ParseData(std::string &buffer)
 {
-
+    std::string header = "";
+    std::string header_terminator = "\r\n\r\n";
+    size_t i = 0;
+    while ((header.size() < header_terminator.size() ||
+            header.substr(header.size() - header_terminator.size()) != header_terminator) &&
+            i < buffer.size()) {
+        header.push_back(buffer[i]);
+    }
 }
