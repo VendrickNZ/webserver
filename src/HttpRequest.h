@@ -11,6 +11,8 @@ public:
     ~HttpRequest();
 private:
     std::string ParseData(const std::string& buffer);
+    std::string ParseHeader(const std::string& buffer);
+    std::string ParseBody(const std::string& buffer);
 };
 
 
