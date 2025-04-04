@@ -12,7 +12,6 @@
 
 HttpRequest::HttpRequest()
     : method(), target(), httpVersion(), headers()
-    : method(), target(), httpVersion(), headers()
 {
 
 }
@@ -27,10 +26,6 @@ std::string ParseData(std::string &buffer)
     ParseHeader(buffer);
 }
 
-std::string ParseHeader(std::string &buffer)
-{
-    
-}
 
 std::string ParseHeader(std::string &buffer)
 {
